@@ -1,0 +1,23 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content class="containerLogin">
+    <ion-row class="ion-align-items-center">
+        <div class="loginImage"></div>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+        <p class="textoLogin ">Listo para comenzar</p>
+    </ion-row>
+    <ion-row>
+        <ion-col class="ion-align-items-center  ion-padding-top">
+                <ion-row class="ion-justify-content-center">
+                        <ion-button class="buttonLogin Google" (click)='onLoginGoogle()'><img class=" iconButtonLogin" src="../../../assets/image/google.png"> <p class="textButtonLogin">Iniciar con Google</p>  </ion-button>
+                </ion-row>
+            
+                <ion-row class="ion-justify-content-center">
+                        <ion-button class="buttonLogin" (click)='onLoginFacebook()'><img class=" iconButtonLogin" src="../../../assets/image/facebook.png"><p class="textButtonLogin">Iniciar con Facebook</p>  </ion-button>
+                </ion-row>
+        </ion-col>
+    </ion-row>
+</ion-content>
