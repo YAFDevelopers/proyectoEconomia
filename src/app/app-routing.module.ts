@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {AuthGuard} from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
+  { path: 'home', loadChildren: './pages/home/home.module#HomePageModule',canActivate:[AuthGuard] },
+  { path: 'form-details', loadChildren: './pages/form-details/form-details.module#FormDetailsPageModule',canActivate:[AuthGuard] }
 ];
 
 @NgModule({

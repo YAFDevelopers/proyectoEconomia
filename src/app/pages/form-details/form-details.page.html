@@ -1,0 +1,42 @@
+<h1 class="title" *ngIf="FirsTime">Bienvenidos</h1>
+<h1 class="title" *ngIf="!FirsTime">Actualizar datos</h1>
+
+<ion-content>
+  <ion-grid class="frame">
+     <p *ngIf="FirsTime">Antes de empezar necesitamos que llenes
+        la siguiente informacion.</p>
+     <br>
+     <ion-label>¿Cuantos ingresos fijos tienes?</ion-label>
+     <ion-row class="MyInput">
+        <ion-icon class="icono" name="cash"></ion-icon>
+        <ion-input class="imputsIonic" type="number"  [(ngModel)]="user.ingreso" ></ion-input>
+     </ion-row>
+     <br>
+     <ion-label>¿Que dia del mes resibes estos ingresos?</ion-label>
+     <ion-row class="MyInput">
+        <ion-icon class="icono" name="calendar"></ion-icon>
+        <ion-input class="imputsIonic" type="number"  [(ngModel)]="user.diaPago"></ion-input>
+     </ion-row>
+     <br>
+     <ion-label>¿Cuanto porcentaje de ingreso quieres ahorrar?</ion-label>
+     <ion-row class="MyInput">
+        <span class="icono">%</span>
+        <ion-input class="imputsIonic" type="number"  [(ngModel)]="user.porcentajeAhorro"></ion-input>
+     </ion-row>
+  </ion-grid>
+  <br>
+  <p>Recuerda que puedes actualizar esta información mas adelante.</p>
+
+  <ion-fab  *ngIf="!FirsTime" vertical="bottom" horizontal="end" slot="fixed">
+     <ion-fab-button class="botonFlotante">
+           <ion-icon class="iconoBoton" name="checkmark" (click)="updateExtend()"></ion-icon>
+     </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab  *ngIf="FirsTime" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button class="botonFlotante">
+            <ion-icon class="iconoBoton" name="checkmark" (click)="insertExtend()"></ion-icon>
+      </ion-fab-button>
+   </ion-fab>
+
+</ion-content>

@@ -1,0 +1,33 @@
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    color: #E67E22;
+}
+p{
+    margin:0px 10px;
+    text-align: center;
+}
+.frame{
+    margin:0px 10px;
+}
+.MyInput{
+    border: 1px solid #D7D7D7 !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+}
+.icono{
+    color: #E67E22;
+    font-size: 30px;
+    margin-left:10px;
+    margin-top: 5px; 
+}
+.imputsIonic{
+    text-align:right;
+}
+.botonFlotante{
+    --background: #E67E22;
+}
+
+.iconoBoton{
+    font-size: 50px;
+}
