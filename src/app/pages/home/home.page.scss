@@ -1,0 +1,27 @@
+$principal: #E67E22 ;
+
+.barra  {
+  --background: #E67E22;
+    height: 15vh;
+    display: flex;
+  
+}
+.Nombre_del_proyecto   {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1rem;
+}
+h3{
+  color: $principal;
+}
+.GastosDia .cuadro  {
+  background: #FFFFFF;
+  border: 1px solid #D7D7D7;
+  box-sizing: border-box;
+  border-radius: 45px;  
+}
+
+.GastosDia .cuadro a {
+font-size: 2rem;
+color: #E67E22; 
+}

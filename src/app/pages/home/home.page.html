@@ -1,9 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+  <ion-toolbar class="barra">
+    <ion-title class="Nombre_del_proyecto ">Piggy</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
+<ion-content padding>
+  <section>
+      <div>
+          <h3>ESTADO</h3>
+      </div>
+      <ion-card>
+        <p>
+          hola la vida que encontramos en un dia de la semana por que la verdad no se que hacer con mi vida solo me puse apensar que
+          nose que mas escribir yeiii
+        </p>
+      </ion-card>
+  </section>
+  <section class="GastosDia">
+    <div>
+      <h3>GASTOS DEL DIA</h3>
+    </div>
+      <ion-card>
+           <div class="cuadro">
+              <a  class="transporte" href="#">
+                <ion-icon name="bus"></ion-icon>
+              </a>
+           </div> 
+           <div class="cuadro">
+            <a href="#">hola</a>
+         </div> 
+      </ion-card>
+  </section>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="Lunes">
+        <ion-icon name="contact"></ion-icon>
+        <ion-label>Configuración</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="speakers">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Calendario</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
