@@ -26,10 +26,10 @@ export class FormDetailsPage implements OnInit {
   ngOnInit() {
     this.authService.isAuth().subscribe(user => {
       if (user) {
-        this.user.id = user.uid;
         console.log('User', user.uid);
         this.authService.isFirstTime(user.uid).subscribe(res => {
           console.log(res);
+          this.user = res;
           if (res == undefined) {
             this.FirsTime = true;
           }
@@ -78,6 +78,7 @@ export class FormDetailsPage implements OnInit {
   updateExtend(): void{
     delete this.user.saldo;
     delete this.user.ahorro;
+    this.user.porcentajeAhorro = this.user.porcentajeAhorro / 100;    
     this.authService.updateUser(this.user.id, this.user);
     this.router.navigate(['home']);
   }

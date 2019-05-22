@@ -1,7 +1,14 @@
+.barra  {
+    --background: #E67E22;
+      // height: 15vh;
+      display: flex;
+    
+  }
 .title{
     text-align: center;
     text-transform: uppercase;
-    color: #E67E22;
+    color:white;
+    font-size: 20px;
 }
 p{
     margin:0px 10px;

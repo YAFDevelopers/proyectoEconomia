@@ -1,5 +1,13 @@
-<h1 class="title" *ngIf="FirsTime">Bienvenidos</h1>
-<h1 class="title" *ngIf="!FirsTime">Actualizar datos</h1>
+<h1 class="title" *ngIf="FirsTime"></h1>
+<!-- <h1 class="title" >Actualizar datos</h1> -->
+<ion-header *ngIf="!FirsTime">
+   <ion-toolbar class="barra">
+     <ion-buttons slot="start">
+       <ion-back-button text="" style="color: white" defaultHref="home"></ion-back-button>
+     </ion-buttons>
+     <ion-title><h1 class="title">Actualizar</h1></ion-title>
+   </ion-toolbar>
+ </ion-header>
 
 <ion-content>
   <ion-grid class="frame">
