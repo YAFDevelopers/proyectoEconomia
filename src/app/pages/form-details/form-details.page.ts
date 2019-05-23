@@ -17,6 +17,7 @@ export class FormDetailsPage implements OnInit {
     ingreso: 0,
     porcentajeAhorro: 0,
     saldo: 0,
+    saldoInicial:0,
     diaPago: 0,
     ahorro: 0,
   }
@@ -70,7 +71,8 @@ export class FormDetailsPage implements OnInit {
     } else {
       this.user.porcentajeAhorro = this.user.porcentajeAhorro / 100;
       this.user.ahorro = this.user.porcentajeAhorro * this.user.ingreso;
-      this.user.saldo = this.user.ingreso - this.user.ahorro;
+      this.user.saldoInicial = this.user.ingreso - this.user.ahorro;
+      this.user.saldo = this.user.saldoInicial;
       console.log(this.user);
       this.authService.newUser(this.user);
       this.router.navigate(['home']);
@@ -81,6 +83,7 @@ export class FormDetailsPage implements OnInit {
   updateExtend(): void{
     delete this.user.saldo;
     delete this.user.ahorro;
+    delete this.user.saldoInicial;
     this.user.porcentajeAhorro = this.user.porcentajeAhorro / 100;    
     this.authService.updateUser(this.user.id, this.user);
     this.router.navigate(['home']);

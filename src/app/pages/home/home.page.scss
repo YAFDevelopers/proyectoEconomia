@@ -14,13 +14,31 @@ $principal: #E67E22 ;
 h3{
   color: $principal;
 }
+.center{
+  text-align: center; 
+}
+.rigth{
+  text-align: right;
+  margin-right:25px;
+}
+hr {
+  height: 1px !important;
+  width: 90% !important;
+  margin: 0px 10%;
+  background:#919EA9 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 .GastosDia .cuadro  {
   background: #FFFFFF;
   border: 1px solid #D7D7D7;
   box-sizing: border-box;
   border-radius: 45px;  
 }
-
+.botonFlotante{
+  --background: #E67E22;
+}
 .GastosDia .cuadro a {
 font-size: 2rem;
 color: #E67E22; 
