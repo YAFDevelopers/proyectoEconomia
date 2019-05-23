@@ -14,27 +14,28 @@ export class FormDetailsPage implements OnInit {
   constructor(private authService: AuthService, private alertController: AlertController, private router: Router) { }
   public user: UserInterface = {
     id: "",
-    ingreso: null,
-    porcentajeAhorro: null,
-    saldo: null,
-    diaPago: null,
-    ahorro: null,
+    ingreso: 0,
+    porcentajeAhorro: 0,
+    saldo: 0,
+    diaPago: 0,
+    ahorro: 0,
   }
-  public FirsTime: boolean;
+  public FirsTime: boolean = true;
 
 
   ngOnInit() {
     this.authService.isAuth().subscribe(user => {
       if (user) {
         console.log('User', user.uid);
+        this.user.id = user.uid;
         this.authService.isFirstTime(user.uid).subscribe(res => {
           console.log(res);
-          this.user = res;
           if (res == undefined) {
-            this.FirsTime = true;
+            this.FirsTime = true; 
           }
           else {
             this.FirsTime = false;
+            this.user = res;
           }
         });
       }
@@ -43,6 +44,7 @@ export class FormDetailsPage implements OnInit {
       }
 
     });
+    console.log(this.FirsTime);
   }
 
   async presentAlert(mensaje) {
@@ -69,9 +71,10 @@ export class FormDetailsPage implements OnInit {
       this.user.porcentajeAhorro = this.user.porcentajeAhorro / 100;
       this.user.ahorro = this.user.porcentajeAhorro * this.user.ingreso;
       this.user.saldo = this.user.ingreso - this.user.ahorro;
+      console.log(this.user);
       this.authService.newUser(this.user);
       this.router.navigate(['home']);
-      console.log(this.user);
+      
     }
   }
 
